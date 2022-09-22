@@ -1,0 +1,25 @@
+Source: node-jsonselect
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , uglifyjs
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-jsonselect
+Vcs-Git: https://salsa.debian.org/js-team/node-jsonselect.git
+Homepage: http://jsonselect.org
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
+
+Package: node-jsonselect
+Architecture: all
+Depends: ${misc:Depends}
+ , libjs-jquery
+Multi-Arch: foreign
+Description: CSS-like selectors for JSON
+ JSONSelect is an attempt to create a selector language similar to CSS for
+ JSON objects.
+ .
+ Node.js is an event-based server-side JavaScript engine.

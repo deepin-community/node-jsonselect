@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	dh_auto_build
+	uglifyjs -o site/js/jquery.ba-hashchange.min.js \
+	debian/missing-sources/jquery.ba-hashchange.js
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -f site/js/jquery.ba-hashchange.min.js
